@@ -4,6 +4,7 @@
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
+    background-color: ghostwhite;
     box-shadow: 2px 2px 5px gainsboro;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     display: inline-block;
