@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react';
 import React from 'react';
 import { XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, VerticalBarSeries } from 'react-vis';
 import "./Charts.css";
@@ -12,17 +13,18 @@ const barChart = ( props ) =>
       x: d.x,
       y: Math.max(axisData[idx].y, axisData[idx].y)
     }));
-    const BarSeries = VerticalBarSeries;
+    const size=500;
+    const leftPadding=size/8;
     return (
       <div className="ChartDiv" onClick={props.click}>
         <p><b>{props.ChartName}</b></p>
         <div className="ChartItself">
-          <XYPlot xType="ordinal" width={500} height={400} xDistance={200}>
+          <XYPlot margin={{bottom: 50, left: leftPadding}} xType="ordinal" width={size} height={size/2} animation={true}>
             <VerticalGridLines />
             <HorizontalGridLines />
             <XAxis />
-            <YAxis />
-            <BarSeries data={axisData} />
+            <YAxis tickSize={5} tickPadding={0}/>
+            <VerticalBarSeries className="bar" animation={true} data={labelData} opacity={barOpacity}/>           
           </XYPlot>
         </div>
       </div>
