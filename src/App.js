@@ -36,7 +36,10 @@ class App extends Component {
     );
     return (
       <div className="App">
-        {charts}
+        <div className="chartsCard">
+          <p>Estas son nuestras estadísticas principales:</p>
+            <div className="chartsContainer">{charts}</div>
+        </div>
       </div>
     );
   }

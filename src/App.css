@@ -1,6 +1,239 @@
 body{
-  display: inline-block;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .App{
   display: inline-block;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#inicio{
+	animation: ease-in ;
+}
+
+header {
+  display:flex;
+  box-shadow: 2px 5px 5px gainsboro;
+  justify-content:center ;
+  align-items: center;
+}
+
+.barraMenu
+ {
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  float: top;
+  position: fixed;
+  min-width: 100%;
+  z-index: 2;
+  user-select: none;
+}
+
+.barraMenu a 
+{
+  float: left;
+  height: 22px;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contenedorBoton 
+{
+  float: left;
+  overflow: hidden;
+}
+
+.btn 
+{
+  float: left;
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.contenedorBoton .dropContenedor 
+{
+  cursor: pointer;
+  font-size: 16px;  
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/*.barraMenu a:hover, .contenedorBoton:hover .dropContenedor, .dropContenedor:focus, .btn:hover
+{
+  background-color: rgb(136, 136, 238);
+}*/
+
+.barraMenu a:hover{
+	
+	color: #032254;
+
+}
+.barraMenu li a::after{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:2px;
+  transform:scaleX(0);
+  bottom:0;
+  left:0;
+  background-color:#032254;
+  transform-origin:bottom right;
+  transition:transform 0.7s ease-out;
+}
+.barraMenu a:hover::after{
+  transform:scaleX(1);
+  transform-origin:bottom left;
+}
+
+.contenedorBoton-content 
+{
+  display: none;
+  background-color:rgb(20, 20, 20);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;   
+  position: fixed; 
+}
+
+.barraMenu a, 
+.barramenu .contenedorBoton, 
+.barraMenu .contenedorBoton .dropContenedor, 
+.barraMenu .btn 
+{
+  -webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.contenedorBoton-content a 
+{
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.contenedorBoton-content a:hover 
+{
+  background-color: rgb(136, 136, 238);
+}
+
+.icon{
+  display: none;
+}
+
+#menulogo
+{
+	
+	background-size: 80px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 50%;
+	width: 100px;
+	right: 50%;
+	left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+}
+
+#menulogo:hover
+{
+	background-color: rgba(0,0,0,0);
+}
+
+.chartsCard{
+  border-color: gainsboro;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  box-shadow: 2px 2px 5px gainsboro;
+  margin: 20px;
+  min-width: 600px;
+}
+@media screen and (max-width: 1000px)
+{
+  .barraMenu a
+  {
+    height: 22px;
+  }
+
+  .barraMenu a, .contenedorBoton .dropContenedor 
+  {
+    display: none;
+  }
+
+  #menulogo
+  {
+    display: block;
+    height: 50%;
+  }
+	
+  .barraMenu a.icon 
+  {
+    float: left;
+    display: block;
+  }
+
+  .barraMenu.responsive {position: fixed;}
+  .barraMenu.responsive .icon 
+  {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
+  .barraMenu.responsive a 
+  {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .barraMenu.responsive .btn
+  {
+    width: 100%;
+    text-align: left;
+  }
+
+  .barraMenu.responsive .contenedorBoton {float: none; width:100%;}
+  .barraMenu.responsive .contenedorBoton-content {position: relative;}
+  .barraMenu.responsive .contenedorBoton .dropContenedor 
+  {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .contenedorBoton-content
+  {
+    box-shadow: none;
+  }
+}
+
+.chartsContainer{
+  padding-left: 350px;
 }
