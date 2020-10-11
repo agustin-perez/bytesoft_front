@@ -24,7 +24,7 @@ const barChart = ( props ) =>
             <HorizontalGridLines />
             <XAxis />
             <YAxis tickSize={5} tickPadding={0}/>
-            <VerticalBarSeries className="bar" animation={true} data={labelData} opacity={barOpacity}/>           
+            <VerticalBarSeries className="bar" animation={true} data={labelData}/>           
           </XYPlot>
         </div>
       </div>

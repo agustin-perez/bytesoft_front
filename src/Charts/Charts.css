@@ -33,5 +33,5 @@
 .bar:hover
 {
     cursor: pointer;
-    /*opacity: .5;*/
+    opacity: .5;
 }
