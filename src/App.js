@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Products from './Pages/Products/Products';
 import Stats from './Pages/Stats/Stats';
 import Contact from './Pages/Contact/Contact';
 import logo from './logo.png'
-
 import './App.css';
 
 class App extends Component {
@@ -41,6 +39,6 @@ class App extends Component {
       </Router>
     )
   }
-}
+} 
 
 export default App;
