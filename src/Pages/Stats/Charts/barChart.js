@@ -5,15 +5,18 @@ import "./Charts.css";
 const barChart = ( props ) => 
 {
     const axisData = []
+    const size=500;
+    const leftPadding=size/8;
+
     for (var i = 0; i < props.xAxis.length; i++){
       axisData[i] = {x: props.xAxis[i], y: props.yAxis[i]};
     }
+
     const labelData = axisData.map((d, idx) => ({
       x: d.x,
       y: Math.max(axisData[idx].y, axisData[idx].y)
     }));
-    const size=500;
-    const leftPadding=size/8;
+
     return (
       <div className="ChartDiv" onClick={props.click}>
         <p><b>{props.ChartName}</b></p>

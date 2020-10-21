@@ -6,17 +6,17 @@ body
   margin: 0;
   padding: 0;
 }
-.App
+.App, .wrapper, .Stats, .About
 {
   animation: ease-in; 
-  opacity: 0;
+  opacity: 0.5;
   transition: opacidad 0.5s forwards;
   -webkit-animation: opacidad 0.5s forwards;
 }
 
 @keyframes opacidad
 {
-  0%   {opacity: 0;}
+  0%   {opacity: 0.5;}
   100% {opacity: 1;}
 }
 
