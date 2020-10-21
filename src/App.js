@@ -1,47 +1,45 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+import Products from './Pages/Products/Products';
+import Stats from './Pages/Stats/Stats';
+import Contact from './Pages/Contact/Contact';
+import logo from './logo.png'
+
 import './App.css';
-import Chart from './Charts/barChart';
 
 class App extends Component {
-  state = {
-    charts: [
-      { id: 'asfa1', ChartName: 'Tu', ChartDesc: 'Tu viejaaaaaa', xAxis: ['aaa', 'Sample 2', 'Sample 3', 'sasfdsaf'], yAxis: [3000000, 400, 11, 44]},
-      { id: 'asfa1', ChartName: 'Vieja', ChartDesc: 'Tu viejaaaaaa es', xAxis: ['Sample 1', 'Sample 2', 'Sample 3'], yAxis: [800000, 300, 1184423]},
-      { id: 'asfa1', ChartName: 'Es', ChartDesc: 'nooo que estás mirando', xAxis: ['Sample 1', 'Sample 2', 'Sample 3'], yAxis: [900, 600, 118]},
-      { id: 'asfa1', ChartName: 'Vieja', ChartDesc: 'Tu viejaaaaaa es', xAxis: ['Sample 1', 'Sample 2', 'Sample 3'], yAxis: [800000, 300, 1184423]},
-      { id: 'asfa1', ChartName: 'Es', ChartDesc: 'nooo que estás mirando', xAxis: ['Sample 1', 'Sample 2', 'Sample 3'], yAxis: [900, 600, 118]},
-      { id: 'asfa1', ChartName: 'Re', ChartDesc: 'Chinchulín', xAxis: ['Sample 1', 'Sample 2', 'Sample 3'], yAxis: [700, 500, 11]}
-    ],
-  }
-
-  chartClick = (index) => {
-    
-  }
-
-  render () {
-    console.log(this.state);
-    let charts = null;
-    charts = (
-      <div>
-        {this.state.charts.map((chart, index) => {
-          return <Chart 
-          key={chart.id}
-          ChartName={chart.ChartName}
-          ChartDesc={chart.ChartDesc}
-          xAxis={chart.xAxis}
-          yAxis={chart.yAxis}
-          />
-        })}
-      </div>
-    );
-    return (
-      <div className="App">
-        <div className="chartsCard">
-          <p>Estas son nuestras estadísticas principales:</p>
-            <div className="chartsContainer">{charts}</div>
+  render(){
+    return(
+      <Router>
+        <div className="App">
+          <div className="navBar">
+            <div className="items"></div>
+            <Link className="link" to={'/'}><img src={logo} alt="Logo"/></Link>
+            <nav>
+              <ul>
+                  <li><Link className="link" to={'/'}>INICIO</Link></li>
+                  <li><Link className="link" to={'/about'}>QUIÉNES SOMOS</Link></li>	
+                  <li><Link className="link" to={'/stats'}>ESTADÍSTICAS</Link></li>	
+                  <li><Link className="link" to={'/productos'}>PRODUCTOS</Link></li>
+                  <li><Link className="link" to={'/contacto'}>CONTACTO</Link></li>	
+              </ul>
+            </nav>
+          </div>
+          <div className="router">
+            <Switch>
+                <Route exact path='/' component={Home}/>
+                <Route path='/about' component={About}/>
+                <Route path='/stats' component={Stats}/>
+                <Route path='/productos' component={Products}/>
+                <Route path='/contacto' component={Contact}/>
+            </Switch>
+          </div>
         </div>
-      </div>
-    );
+      </Router>
+    )
   }
 }
 

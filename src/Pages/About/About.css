@@ -1,0 +1,65 @@
+.AboutWrapper
+{
+	width: 65%;
+	height: 90%;
+	position: absolute;
+	top: 80%;
+    left : 50%;
+	color: white;
+	font-family: Montserrat;
+    transform: translate(-50%, -50%); 	
+}
+
+.AboutWrapper .uno, .dos
+{
+ 	display: flex;
+	background-color: #032254;
+}
+
+.AboutWrapper .uno .titulo
+{
+	font-size: 35px;
+	width: 50%;
+	position: absolute;
+	padding: 30px;
+	text-align: center;
+}
+
+.AboutWrapper .dos .titulo
+{
+	font-size: 35px;
+	margin-left: 50%;
+	width:50%;
+	position: absolute;
+	padding: 30px;
+	text-align: center;
+}
+
+.AboutWrapper .uno p
+{
+	text-align: center;
+	font-size: 20px;
+	margin-top: 10%;
+	padding: 30px;
+	width: 50%
+}
+
+.AboutWrapper .uno img
+{
+	height: 518px;
+    width: 50%;
+}
+
+.AboutWrapper .dos p
+{
+	text-align: center;
+	font-size: 20px;
+	margin-top: 10%;
+	padding: 30px;
+	width: 50%
+}
+
+.AboutWrapper .dos img
+{
+    width: 50%
+}
