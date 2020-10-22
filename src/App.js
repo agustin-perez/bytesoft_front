@@ -5,17 +5,63 @@ import About from './Pages/About/About';
 import Products from './Pages/Products/Products';
 import Stats from './Pages/Stats/Stats';
 import Contact from './Pages/Contact/Contact';
-import logo from './logo.png'
+import logo from './Media/logo black.png'
 import './App.css';
 
 class App extends Component {
   render(){
+
+    function responsiveButton() 
+    {
+      var menu = document.getElementById("items");
+      if (menu.className === "navBar") 
+      {
+        menu.className += " responsive";
+      } 
+      else 
+      {
+        menu.className = "navBar";
+      }
+    } 
+
+    function cerrarResponsive()
+    {
+      var menu = document.getElementById("responsiveStandard");
+      if(menu.className != "navBar")
+      {
+        menu.className="navBar";
+      }
+    }
+
+    function cerrarMenus()
+    {
+      var busMenu = document.getElementsByClassName('contenedorBoton-content');
+        for (var i = 0; i < busMenu.length; i++)
+        {
+          var menuAbierto = busMenu[i];
+          if (menuAbierto.classList.contains('show')) 
+          {
+            menuAbierto.classList.remove('show');
+            cerrarResponsive();
+          }
+        }
+    }
+
+    window.onclick = function(e) 
+    {
+      if (!e.target.matches('.navBar')) 
+      {
+        cerrarMenus();
+      }
+    } 
+
     return(
       <Router>
         <div className="App">
           <div className="navBar">
             <div className="items"></div>
-            <Link className="link" to={'/'}><img src={logo} alt="Logo"/></Link>
+            <button className="responsiveButton" onClick={this.responsiveButton}>&#9776;</button>
+            <Link className="link" to={'/'}><img className="mainLogo" src={logo} alt="Logo"/></Link>
             <nav>
               <ul>
                   <li><Link className="link" to={'/'}>INICIO</Link></li>

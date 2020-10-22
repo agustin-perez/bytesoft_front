@@ -1,5 +1,4 @@
-.About
-{
+.About {
 	width: 65%;
 	height: 90%;
 	position: absolute;
@@ -10,14 +9,12 @@
     transform: translate(-50%, -50%); 	
 }
 
-.About .uno, .dos
-{
+.About .uno, .dos {
  	display: flex;
 	background-color: #032254;
 }
 
-.About .uno .titulo
-{
+.About .uno .titulo {
 	font-size: 35px;
 	width: 50%;
 	position: absolute;
@@ -25,8 +22,7 @@
 	text-align: center;
 }
 
-.About .dos .titulo
-{
+.About .dos .titulo {
 	font-size: 35px;
 	margin-left: 50%;
 	width:50%;
@@ -35,23 +31,20 @@
 	text-align: center;
 }
 
-.About .uno p
-{
-	text-align: center;
+.About .uno p {
+	text-align: justify;
 	font-size: 20px;
 	margin-top: 10%;
 	padding: 30px;
 	width: 50%
 }
 
-.About .uno img
-{
+.About .uno img {
 	height: 518px;
     width: 50%;
 }
 
-.About .dos p
-{
+.About .dos p {
 	text-align: center;
 	font-size: 20px;
 	margin-top: 10%;
@@ -59,7 +52,6 @@
 	width: 50%
 }
 
-.About .dos img
-{
+.About .dos img {
     width: 50%
 }

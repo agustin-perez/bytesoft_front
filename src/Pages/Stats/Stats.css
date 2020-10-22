@@ -1,51 +1,43 @@
-.Stats
-{
+.Stats {
     background-image: url('./Media/bannerCharts.jpg');
     background-size: 100%;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.wrapper1
-{
+.wrapper1 {
     height: 87vh;
     background-color:#032254;
     color: white;
 }
 
-.wrapper1 h1
-{
+.wrapper1 h1 {
     font-size: 48px;
     text-align: center;
     display: block;
     padding-top: 20vh;
 }
 
-.wrapper1 p
-{
+.wrapper1 p {
     font-size: 28px;
     padding-top: 55px;
     text-align: center;
 }
 
-.banner1
-{
+.banner1 {
     height: 500px;
 }
 
-.chartsContainer
-{
+.chartsContainer {
     background-color: white;
     height: 150vh;
 }
 
-.mappedChart .transition 
-{
+.mappedChart .transition {
     opacity: 0;
     animation: chartTransition .7s ease-out;
 }
 
-@keyframes chartTransition
-{ 
+@keyframes chartTransition { 
     0% { opacity: 0; transform: translateX(-30rem);}
     100% { opacity: 1; transform: scale(1); }
 }

@@ -10,7 +10,7 @@ class About extends Component{
                     <div className="titulo">
                         <h2>Nosotros</h2>
                     </div>	
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <p>"Nosotros somos ByteSoft, un equipo de estudiantes encargados de hacer el proyecto llamado “Sistema de consulta médica” para el pasaje de año en ESI Buceo 2020 del grupo 3°BD."</p>
                     <img src={laptop}></img>
                 </div>
                 <div className="dos">
@@ -18,15 +18,13 @@ class About extends Component{
                     <div className="titulo">
                         <h2>Misión</h2>
                     </div>	
-                    <p>"Somos una empresa de desarrollo de software personalizado ubicada en el barrio Buceo que busca satisfacer las necesidades de nuestros clientes mediante el desarrollo de programas únicos y a medida, a gusto y necesidades de cada cliente, brindándoles un producto de una calidad única además de un debido soporte para el mismo. Nos dedicamos actualmente a empresas nacionales y a futuro planeamos dedicarnos también a empresas internacionales."</p>
+                    <p>"Somos una empresa de desarrollo de software personalizado ubicada en el barrio Buceo que busca satisfacer las necesidades de nuestros clientes mediante el desarrollo de programas únicos y a medida, a gusto y necesidades de cada cliente, brindándoles un producto de una calidad única además de un debido soporte para el mismo. Nuestra clientela se basa en empresas nacionales o terceros que necesiten una solución personalizada en software, ese es nuestro trabajo."</p>
                 </div>
                 <div className="uno">
                     <div className="titulo">
                         <h2>Visión</h2>
                     </div>	
-                    <p>"Planeamos proyectarnos como la opción ideal en cuanto a empresas de desarrollo de software en Uruguay, si alguien piensa en un producto de software personalizado, buscamos que piense en ByteSoft.
-                    Además, nos interesa el desarrollo paulatino de la misma empresa, para así, además de ser reconocidos por nuestros productos, que nos reconozcan por ayudar a cada vez más trabajadores a tener un crecimiento profesional en el área del desarrollo informático.
-                    Tenemos pensado enfocarnos exclusivamente en el área del desarrollo informático."</p>
+                    <p>"ByteSoft será una empresa dedicada exclusivamente al desarrollo informático. Planeamos proyectarnos como la opción ideal en cuanto a empresas de desarrollo de software en Uruguay y, a futuro, internacionalmente. Buscamos que, si alguien necesita un producto de software personalizado, piense en ByteSoft como su solución."</p>
                     <img src={laptop}></img>
 	            </div>
             </div>
