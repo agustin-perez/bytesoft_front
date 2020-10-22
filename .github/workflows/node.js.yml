@@ -11,13 +11,12 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    env:  
+      working-directory: ./build
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
-
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -38,7 +37,7 @@ jobs:
         # Artifact name
         name: Bytesoft Web build
         # A file, directory or wildcard pattern that describes what to upload
-        path: /*
+        path: ${{env.working-directory}}
         # The desired behavior if no files are found using the provided path.
         if-no-files-found: warn # optional, default is warn
         # Duration after which artifact will expire in days. 0 means using default retention. Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
