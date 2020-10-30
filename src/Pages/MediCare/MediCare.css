@@ -1,0 +1,113 @@
+.Stats {
+    /*background-image: url('./Media/bannerCharts.jpg');
+    background-size: 100vh;
+	background-repeat: repeat-y;
+    background-attachment: fixed;*/
+}
+.wrapper1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url('./Media/medicareBackground.png');
+    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.wrapper1 h1 {
+    font-size: 48px;
+    text-align: center;
+    display: block;
+    padding-top: 20vh;
+}
+
+.wrapper1 p {
+    font-size: 28px;
+    padding-top: 55px;
+    text-align: center;
+}
+
+.banner1 {
+    height: 500px;
+}
+
+.chartsContainer {
+    background-image: url('./Media/chartsBackground.jpg');
+    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    color: gainsboro;
+    border-top: rgba(0,0,0,0) solid 1px;
+    height: 100%;
+    z-index: 2;
+}
+
+.mappedChart .transition {
+    position: relative;
+    opacity: 0;
+    animation: chartTransition .7s ease-out;
+}
+
+@keyframes chartTransition { 
+    0% { opacity: 0; transform: translateX(-30rem);}
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.userText{
+    padding-top: 20px;
+    font-size: 48px;
+    text-align: center;
+    position: relative;
+    animation: title1T 2s forwards;
+}
+
+@keyframes title1T {
+    0% { right: -20%; }
+    100% { right: 0; }
+}
+
+@-webkit-keyframes title1T {
+    0% { right: -20%; }
+    100% { right: 0%; }
+}
+
+.totalUsers{
+    top: 0;
+    text-align: center;
+    font-size: 72px;
+    font-weight: bold;
+    position: relative;
+    animation: color-change 6s forwards;
+}
+
+@keyframes color-change {
+    0% { left: -20%; color: rgb(174, 0, 255); }
+    35% { left: 0; }
+    50% { color: rgb(0, 4, 255) ;}
+    100% { color: rgb(174, 0, 255); }
+}
+
+@-webkit-keyframes color-change {
+    0% { left: -20%; color: rgb(174, 0, 255); }
+    35% { left: 0; }
+    50% { color: rgb(0, 4, 255) ;}
+    100% { color: rgb(174, 0, 255); }
+}
+
+.medicareLogo{
+    position: relative;
+    padding-top: 20vh;
+    width: 500px;
+    animation: logoTranslation 3s forwards;
+}
+
+@keyframes logoTranslation {
+    0% { left: -100vh; }
+    100% { left: 0; }
+}
+
+@-webkit-keyframes logoTranslation {
+    0% { left: -100%; }
+    100% { left: 50%; }
+}

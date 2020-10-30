@@ -11,10 +11,10 @@ class About extends Component{
                         <h2>Nosotros</h2>
                     </div>	
                     <p>"Nosotros somos ByteSoft, un equipo de estudiantes encargados de hacer el proyecto llamado “Sistema de consulta médica” para el pasaje de año en ESI Buceo 2020 del grupo 3°BD."</p>
-                    <img src={laptop}></img>
+                    <img src={laptop} alt="laptop"></img>
                 </div>
                 <div className="dos">
-                    <img src={laptop}></img>
+                    <img src={laptop} alt="laptop"></img>
                     <div className="titulo">
                         <h2>Misión</h2>
                     </div>	
@@ -25,7 +25,7 @@ class About extends Component{
                         <h2>Visión</h2>
                     </div>	
                     <p>"ByteSoft será una empresa dedicada exclusivamente al desarrollo informático. Planeamos proyectarnos como la opción ideal en cuanto a empresas de desarrollo de software en Uruguay y, a futuro, internacionalmente. Buscamos que, si alguien necesita un producto de software personalizado, piense en ByteSoft como su solución."</p>
-                    <img src={laptop}></img>
+                    <img src={laptop} alt="laptop"></img>
 	            </div>
             </div>
         )

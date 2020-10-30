@@ -1,6 +1,11 @@
+@font-face{
+  font-family: 'OpenSans';
+  src: local('OpenSans'), url(./Assets/Fonts/OpenSans-Regular.ttf) format('TrueType');
+}
+
 body {
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -32,27 +37,25 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  min-height: 150px;
-  background-color:white;
+  max-height: 100px;
+  background-color: rgba(50, 50, 50, 1);
+  color: gainsboro;
   overflow: auto;
   z-index: 2;
   overflow: hidden;
 }
 
-.router {
-  margin-top: 150px;
-}
-
 .mainLogo {
   padding-top: 4px;
+  height: 90px;
 }
 
 li, .link {
-  font-family: Montserrat;
   font-weight: 400;
   font-size: 20px;
   text-decoration: none;
   list-style: none;
+  color: gainsboro;
 }
 
 .navBar li {
@@ -65,11 +68,10 @@ li, .link {
   transition: all 0.3s ease 0s;
   display:inline-block;
   position:relative;
-  color: black;
 }
 
 .navBar li .link:hover {
-  color: #032254;
+  color: #7403be;
 }
 
 .navBar li .link::after {
@@ -80,7 +82,7 @@ li, .link {
   transform:scaleX(0);
   bottom:0;
   left:0;
-  background-color:#032254;
+  background-color: black;
   transform-origin:bottom right;
   transition:transform 0.7s ease-out;
 }
@@ -90,7 +92,8 @@ li, .link {
   transform-origin: bottom left;
 }
 
-.wrapper .main {
+.wrapper {
+  padding-top: 100px;
   background-color: #032254;
   width: 100%;
   height: 100vh;
@@ -99,7 +102,6 @@ li, .link {
 .main h1 {
   text-align: center;
   padding: 200px;
-  font-family: Good Sans;
   color: white;
   font-size: 110px;
 }
@@ -107,7 +109,6 @@ li, .link {
 .main h2 {
   text-align: center;
   padding: 100px;
-  font-family:Montserrat;
   color: white;
   font-size: 40px;
   font-weight: 500;
