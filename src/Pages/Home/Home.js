@@ -8,7 +8,7 @@ class Home extends Component{
             <div className="wrapper">
                 <div className="main">
                     <h1>Somos ByteSoft</h1>
-                    <h2>Este es el sublema de Bytesoft</h2>
+                    <h2>Bottom text</h2>
                 </div>
             </div>
         )

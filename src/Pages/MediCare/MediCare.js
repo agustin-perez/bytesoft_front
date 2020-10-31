@@ -6,22 +6,41 @@ import logo from './Media/medicare.png';
 class MediCare extends Component{
   state = {
     charts: [
+      {"yAxis":[2, 1],"xAxis":["", " "],"ChartName":"","id":"0A"},
+      {"yAxis":[2, 1],"xAxis":["", " "],"ChartName":"","id":"0B"},
+      {"yAxis":[2, 1],"xAxis":["", " "],"ChartName":"","id":"0C"},
+      {"yAxis":[2, 1],"xAxis":["", " "],"ChartName":"","id":"0D"}
     ],
+    totalUsers: (0/0),
+    isloading: true
   }
 
-  componentDidMount() {
-    fetch('http://192.168.10.108:8081/mainstats/charts') 
-      .then(response => response.json())
-      .then(data => {this.setState({ charts: data })
-    });
-    fetch('http://192.168.10.108:8081/mainstats/usersactivos')
-      .then(response => response.json())
-      .then(data => {this.setState({ totalUsers: data })
-    });
+  async componentDidMount() {
+    let response = await fetch('https://statsapi.bytesoft.com.uy/backend/charts');
+    let body = await response.json();
+    this.setState({ charts: body, isLoading: true });
+
+    response = await fetch('https://statsapi.bytesoft.com.uy/backend/usersactivos');
+    body = await response.json();
+    this.setState({ totalUsers: body, isLoading: false });
+  
     document.title="MediCare";
   }
 
   render() {
+    if (this.state.isLoading) {
+      return(
+        <div className="Stats">
+          <div className="wrapper1">
+            <h1><img className="medicareLogo" src={logo} alt="Logo"/></h1>
+          </div>
+          <div className="wrapper2">
+          <p className='userText'>Cargando datos...</p>
+        </div>
+      </div>
+      )
+    }
+
     let charts = (
       <div>
         {this.state.charts.map((chart, index) => {
@@ -40,10 +59,12 @@ class MediCare extends Component{
         <div className="wrapper1">
           <h1><img className="medicareLogo" src={logo} alt="Logo"/></h1>
         </div>
-        <div className="chartsContainer">
+        <div className="wrapper2">
         <p className='userText'>Cantidad de usuarios activos de MediCare™</p>
         <p className='totalUsers'>{this.state.totalUsers}</p>
-        {charts}
+        <div className="chartContainer">
+          {charts}
+        </div>
       </div>
     </div>
     );

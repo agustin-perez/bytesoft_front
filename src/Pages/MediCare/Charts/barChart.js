@@ -1,11 +1,12 @@
 import React from 'react';
 import { XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, VerticalBarSeries } from 'react-vis';
 import "./Charts.css";
+import "./plot.scss";
 
 const barChart = ( props ) => 
 {
     const axisData = []
-    const size=500;
+    const size=470;
     const leftPadding=size/8;
 
     for (var i = 0; i < props.xAxis.length; i++){
@@ -21,12 +22,12 @@ const barChart = ( props ) =>
       <div className="ChartDiv" onClick={props.click}>
         <p><b>{props.ChartName}</b></p>
         <div className="ChartItself">
-          <XYPlot margin={{bottom: 50, left: leftPadding}} xType="ordinal" width={size} height={size/2} animation={true}>
+          <XYPlot margin={{bottom: 50, left: leftPadding}} xType="ordinal" width={size} height={size/1.7} animation={true} >
             <VerticalGridLines />
             <HorizontalGridLines />
             <XAxis />
-            <YAxis tickSize={5} tickPadding={0}/>
-            <VerticalBarSeries className="bar" animation={true} data={labelData}/>           
+            <YAxis tickSize={5} tickPadding={2} tickTotal={12}/>
+            <VerticalBarSeries className="bar" animation={true} data={labelData} color="#4a00c2"/>           
           </XYPlot>
         </div>
       </div>

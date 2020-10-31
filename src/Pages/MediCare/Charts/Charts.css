@@ -6,27 +6,49 @@
     border-radius: 10px;
     border-width: 1px;
     font-family: OpenSans, Arial;
-    display: inline-block;
     margin: 5px;
     padding: 10px;
+    width: 60vw;
+    min-width: 800px;
+    max-width: 2200px;
+    display: block;
     position: relative;
-    display: inline-block;
 }
 
 .ChartDiv p
 {
-    padding-left: 5px;
-    color: darkcyan;
+    text-align: center;
+    justify-content: center;
+    color: #4a00c2;
 }
 
 .ChartItself
 {
-    display: inline-block;
+    position: relative;
+    display: flex;
     font-size: 12px;
+    justify-content: center;
+    margin-top: 20px;
+    left: -28px;
 }
 
-.bar:hover
+.bar
+{
+    color: #4a00c2;
+    background-color: #4a00c2;
+}
+
+/*.bar:hover
 {
     cursor: pointer;
     opacity: .5;
+}*/
+
+@media screen and (max-width: 1000px){
+    .ChartDiv{
+        width: 90%;
+        min-width: 300px;
+        max-width: 1000px;
+        left: 40px;
+    }
 }

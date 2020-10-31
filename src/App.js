@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import MediCare from './Pages/MediCare/MediCare';
-import Contact from './Pages/Contact/Contact';
+//import Contact from './Pages/Contact/Contact';
 import logo from './Assets/Media/logo white.png'
 import './App.css';
 
@@ -75,7 +75,7 @@ class App extends Component {
                 <Route exact path='/' component={Home}/>
                 <Route path='/about' component={About}/>
                 <Route path='/MediCare' component={MediCare}/>
-                <Route path='/contacto' component={Contact}/>
+                <Route path='/contacto' component={Home}/>
             </Switch>
           </div>
         </div>
