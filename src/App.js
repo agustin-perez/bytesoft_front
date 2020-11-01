@@ -9,9 +9,9 @@ import './App.css';
 
 class App extends Component {
   render(){
-
-   /* function responsiveButton() 
+    function responsiveButton() 
     {
+      console.log("triggered");
       var menu = document.getElementById("items");
       if (menu.className === "navBar") 
       {
@@ -26,7 +26,7 @@ class App extends Component {
     function cerrarResponsive()
     {
       var menu = document.getElementById("responsiveStandard");
-      if(menu.className != "navBar")
+      if(menu.className !== "navBar")
       {
         menu.className="navBar";
       }
@@ -45,7 +45,6 @@ class App extends Component {
           }
         }
     }
-
     window.onclick = function(e) 
     {
       if (!e.target.matches('.navBar')) 
@@ -53,7 +52,7 @@ class App extends Component {
         cerrarMenus();
       }
     } 
-    */
+    
     return(
       <Router>
         <div className="App">

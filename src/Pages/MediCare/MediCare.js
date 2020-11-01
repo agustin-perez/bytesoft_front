@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Chart from './Charts/barChart';
 import './MediCare.css';
-import logo from './Media/medicare.png';
+import logo from './Media/Medicare negro.png';
+import minLogo from  './Media/Medicare negro responsive.png';
 
 class MediCare extends Component{
   state = {
@@ -54,10 +55,16 @@ class MediCare extends Component{
       </div>
     );
 
+    let responsiveLogo = logo;
+    if (window.matchMedia('(max-width: 1000px)').matches){
+      responsiveLogo = minLogo;
+    }
+
+
     return (
       <div className="Stats">
         <div className="wrapper1">
-          <h1><img className="medicareLogo" src={logo} alt="Logo"/></h1>
+          <h1><img className="medicareLogo" src={responsiveLogo} alt="Logo"/></h1>
         </div>
         <div className="wrapper2">
         <p className='userText'>Cantidad de usuarios activos de MediCare™</p>
