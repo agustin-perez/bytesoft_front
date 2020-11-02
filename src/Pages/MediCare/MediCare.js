@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Chart from './Charts/barChart';
+import Chart from './Charts/BarChart';
 import './MediCare.css';
 import logo from './Media/Medicare negro.png';
 import minLogo from  './Media/Medicare negro responsive.png';

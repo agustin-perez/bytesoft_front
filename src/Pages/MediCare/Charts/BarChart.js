@@ -3,7 +3,7 @@ import { XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, VerticalB
 import "./Charts.css";
 import "./plot.scss";
 
-const barChart = ( props ) => 
+const BarChart = ( props ) => 
 {
     const axisData = []
     const size=470;
@@ -34,4 +34,4 @@ const barChart = ( props ) =>
     );
 }
 
-export default barChart;
+export default BarChart;
