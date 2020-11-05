@@ -1,13 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Navbar.css";
-import "./Navbar";
+import styled from 'styled-components';
+import LeftNav from "./LeftNav";
 
-const Responsive = ( props ) => 
-{
+const ResponsiveStyle = styled.div`
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 20;
+  display: none;
+  color: gainsboro;
+  @media (max-width: 1000px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: ${({ open }) => open ? 'gainsboro' : 'gainsboro'};
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+    &:nth-child(1) {
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    }
+    &:nth-child(2) {
+      transform: ${({ open }) => open ? 'opacity(100%)' : 'opacity(0%)'};
+      opacity: ${({ open }) => open ? 0 : 1};
+    }
+    &:nth-child(3) {
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+    }
+  }
+`;
+
+const Responsive = ( props ) => {
+    const [open, setOpen] = useState(false)
     return (
-        <div className="">
-
-        </div>
+        <>
+        <ResponsiveStyle open={open} onClick={() => setOpen(!open)}>
+            <div />
+            <div />
+            <div />
+        </ResponsiveStyle>
+        <LeftNav open={open} props/>
+        </>
     );
 }
 

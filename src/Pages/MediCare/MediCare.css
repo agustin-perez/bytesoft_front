@@ -104,8 +104,8 @@
 }
 
 @-webkit-keyframes logoTranslation {
-    0% { left: -100%; }
-    100% { left: 50%; }
+    0% { left: -100vh; }
+    100% { left: 0; }
 }
 
 .chartContainer {

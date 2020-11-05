@@ -1,23 +1,33 @@
 import React from 'react';
 import logo from '../../Assets/Media/logo white.png'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import './Navbar.css';
+import styled from 'styled-components';
+import Responsive from './Responsive';
 
-const Navbar = ( props ) => 
-{
+const Nav = styled.nav`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  z-index: 0;
+  
+  .logo {
+    padding: 15px 0;
+  }
+
+  @media (max-width: 1000px){
+    height: 55px;
+  }
+`;
+
+
+const Navbar = ( props ) => {
     return (
           <div className="navBar">
-            <div className="items"></div>
-            <button className="responsiveButton">&#9776;</button>
-            <Link className="link" to={props.root}><img className="mainLogo" src={logo} alt="Logo"/></Link>
-            <nav>
-              <ul>
-                  <li><Link className="link" to={props.root}>Inicio</Link></li>
-                  <li><Link className="link" to={props.about}>Sobre nosotros</Link></li>	
-                  <li><Link className="link" to={props.medicare}>MediCare™</Link></li>	
-                  <li><Link className="link" to={props.contacto}>Contacto</Link></li>	
-              </ul>
-            </nav>
+    {/*<button className="responsiveButton">&#9776;</button>
+            <Link className="link" to={props.root}><img className="mainLogo" src={logo} alt="Logo"/></Link>*/}
+            <Nav>
+              <Responsive props/>
+            </Nav>
           </div>
     );
 }

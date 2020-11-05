@@ -12,19 +12,6 @@ class App extends Component {
       <Router>
         <div className="App">
         <Navbar root="/" about="/about" medicare="/MediCare" contacto="/contacto"/>
-          {/*<div className="navBar">
-            <div className="items"></div>
-            <button className="responsiveButton" onClick={this.responsiveButton}>&#9776;</button>
-            <Link className="link" to={'/'}><img className="mainLogo" src={logo} alt="Logo"/></Link>
-            <nav>
-              <ul>
-                  <li><Link className="link" to={'/'}>Inicio</Link></li>
-                  <li><Link className="link" to={'/about'}>Sobre nosotros</Link></li>	
-                  <li><Link className="link" to={'/MediCare'}>MediCare™</Link></li>	
-                  <li><Link className="link" to={'/contacto'}>Contacto</Link></li>	
-              </ul>
-            </nav>
-          </div>*/}
           <div className="router">
             <Switch>
                 <Route exact path='/' component={Home}/>
