@@ -1,0 +1,8 @@
+.homeWrapper{
+    background-image: url('./Media/back.png');
+    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 150vh;
+}

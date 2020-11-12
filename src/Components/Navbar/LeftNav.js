@@ -40,13 +40,9 @@ const Ul = styled.ul`
     transform:scaleX(0);
     bottom:0;
     left:0;
-    background-color: black;
+    background-color: gainsboro;
     transform-origin:bottom right;
     transition:transform 0.7s ease-out;
-  }
-
-  li .link:hover {
-    color: #7403be;
   }
 
   li .link:hover::after {
@@ -61,7 +57,7 @@ const Ul = styled.ul`
 
   @media (max-width: 1000px) {
     flex-flow: column nowrap;
-    background-color: rgba(115, 3, 190, 0.99);;
+    background-color: rgba(33, 39, 73, 0.99);
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(149vh)' : 'translateX(-100%)'};
     top: 0;
@@ -96,7 +92,7 @@ const LeftNav = ({open}, props ) => {
           <li><Link className="link" to={'/'}>Inicio</Link></li>
           <li><Link className="link" to={'/about'}>Sobre nosotros</Link></li>	
           <li><Link className="link" to={'/MediCare'}>MediCare™</Link></li>	
-          <li><Link className="link" to={'/contacto'}>Contacto</Link></li>	
+          <li><Link className="link" to={'/contact'}>Contacto</Link></li>	
       </Ul>
     )
   }
@@ -107,7 +103,7 @@ const LeftNav = ({open}, props ) => {
         <li><Link className="link" to={'/'}>Inicio</Link></li>
         <li><Link className="link" to={'/about'}>Sobre nosotros</Link></li>	
         <li><Link className="link" to={'/MediCare'}>MediCare™</Link></li>	
-        <li><Link className="link" to={'/contacto'}>Contacto</Link></li>	
+        <li><Link className="link" to={'/contact'}>Contacto</Link></li>	
       </Ul>
   );
 }

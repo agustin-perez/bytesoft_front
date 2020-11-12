@@ -39,7 +39,6 @@ li, .link {
 
 .wrapper {
   padding-top: 100px;
-  background-color: #032354;
   background-size: 150%;
   background-size: cover;
   background-attachment: fixed;
@@ -48,21 +47,31 @@ li, .link {
 }
 
 .main h1 {
+  top: 50px;
+  position: relative;
   text-align: center;
-  padding: 200px;
+  padding: 100px;
   color: white;
-  font-size: 110px;
+  font-size: 100px;
 }
 
 .main h2 {
   text-align: center;
-  padding: 100px;
+  padding: 40px;
   color: white;
   font-size: 40px;
   font-weight: 500;
 }
 
 @media screen and (max-width: 1000px){
+  .main h1 {
+    font-size: 48px;
+  }
+
+  .main h2 {
+    font-size: 20px;
+  }
+
   .contenedorBoton-content {
     box-shadow: none;
   }

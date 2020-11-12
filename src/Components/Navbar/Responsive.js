@@ -7,8 +7,8 @@ const ResponsiveStyle = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 12px;
-  left: 12px;
+  top: 22px;
+  left: 22px;
   z-index: 20;
   display: none;
   color: gainsboro;
@@ -17,9 +17,9 @@ const ResponsiveStyle = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
   }
-
+  
   div {
-    width: 2rem;
+    width: 30px;
     height: 0.25rem;
     background-color: ${({ open }) => open ? 'gainsboro' : 'gainsboro'};
     border-radius: 10px;
@@ -42,7 +42,7 @@ const Responsive = ( props ) => {
     const [open, setOpen] = useState(false)
     return (
         <>
-        <ResponsiveStyle open={open} onClick={() => setOpen(!open)}>
+        <ResponsiveStyle className="responsiveHamburger" open={open} onClick={() => setOpen(!open)}>
             <div />
             <div />
             <div />
